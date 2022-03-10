@@ -4,10 +4,25 @@ os: mac
 -
 #code
 if block: 
-    insert("if () {") 
-    key(enter:2)
-    key("}")
-    key(up:2 right:3)
+    insert("if () {}") 
+    key(left enter:1)
+    key(up:1)
+
+#for block {user.letter} <number>:
+#    insert("for (int " + letter_1)
+#    insert(" = ")
+#    insert(number)
+#    insert("; " + letter_1)
+
+for block:
+    insert("for () {}") 
+    key(left enter:1)
+    key(up:1 right:1)
+
+while block:
+    insert("while () {}") 
+    key(left enter:1)
+    key(up:1 right:3)
 
 absolute value:
     insert("abs()")
@@ -15,22 +30,61 @@ absolute value:
 
 code workout <number>:
     key(cmd-l)
+    sleep(1)
     insert("https://codeworkout.cs.vt.edu/gym/exercises/")
     insert(number)
     insert("/practice")
     key(enter)
 
-#lingo
-substring:
-    insert("substring()")
 
-return:
-    insert("return ")
- 
+
+#lingo
+#substring:
+#    insert("substring()")
+#    key(left)
+
+#return:
+#    insert("return ")
+
+#types
+new int <phrase> equals <number>:
+    insert("int ")
+    insert(user.formatted_text(phrase, "camel"))
+    insert(" = ")
+    insert(number)
+    insert(";")
+
+new string <phrase>:
+    insert("String ")
+    insert(user.formatted_text(phrase, "camel"))
+    insert(" = ")
+    
+new char <phrase>:
+    insert("char ")
+    insert(user.formatted_text(phrase, "camel"))
+    insert(" = ")
+
+new boolean <phrase>:
+    insert("boolean ")
+    insert(user.formatted_text(phrase, "camel"))
+    insert(" = ")
+
+new double <phrase>:
+    insert("double ")
+    insert(user.formatted_text(phrase, "camel"))
+    insert(" = ")
+
 #symbols
 semi:
     insert(";")
-and:
-    insert("&&")
-or:
-    insert("||")
+
+modulus:
+    insert("%")
+
+divided by:
+    insert("/")
+
+#and:
+#    insert("&&")
+#or:
+#    insert("||")
