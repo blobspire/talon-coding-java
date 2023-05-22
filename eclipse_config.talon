@@ -8,14 +8,9 @@ go line <number>:
     insert(number)
     key(enter)
 
-end:
-    key(cmd-right)
-
-home:
-    key(cmd-left)
-
 format code:
     key(cmd-shift-f)
+    key(cmd-s)
 
 javadoc:
     insert("/**") 
@@ -28,8 +23,15 @@ javadoc class:
     insert("/**") 
     key(enter)
     key(enter)
-    insert("@author Cole Wendrowski") 
+    insert("@author Cole Wendrowski, 9062-94367") 
     key(enter)
     insert("@version ") 
     key(escape)
+
+add to do <phrase>:
+    key(space)
+    insert("//") 
+    key(space)
+    insert("TODO ") 
+    insert(user.formatted_text(phrase, "title"))
 

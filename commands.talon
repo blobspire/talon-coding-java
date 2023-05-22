@@ -2,6 +2,14 @@
 os: mac
 #app: chrome
 -
+
+#actions
+end:
+    key(cmd-right)
+
+home:
+    key(cmd-left)
+
 #code
 if block: 
     insert("if () {}") 
@@ -36,7 +44,8 @@ code workout <number>:
     insert("/practice")
     key(enter)
 
-
+big <word>:
+    insert(user.formatted_text(word, "title"))
 
 #lingo
 #substring:
@@ -83,6 +92,9 @@ modulus:
 
 divided by:
     insert("/")
+
+asperand:
+    insert("@")
 
 #and:
 #    insert("&&")
